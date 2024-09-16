@@ -1,14 +1,27 @@
-This is a Kotlin Multiplatform project targeting Android, iOS.
+## Admob for Kotlin Multiplatform
+> Admob for Kotlin Multiplatform target Android and iOS
 
-* `/composeApp` is for code that will be shared across your Compose Multiplatform applications.
-  It contains several subfolders:
-  - `commonMain` is for code that’s common for all targets.
-  - Other folders are for Kotlin code that will be compiled for only the platform indicated in the folder name.
-    For example, if you want to use Apple’s CoreCrypto for the iOS part of your Kotlin app,
-    `iosMain` would be the right folder for such calls.
+## Dependencies
+- Admob
+- GoogleMobileAds (for iOS)
+- Compose KMP
+- SwiftUI (for iOS)
 
-* `/iosApp` contains iOS applications. Even if you’re sharing your UI with Compose Multiplatform, 
-  you need this entry point for your iOS app. This is also where you should add SwiftUI code for your project.
+## More Details Post
+[Here](https://medium.com/stackademic/admob-integration-in-compose-multiplatform-02ea5e971584)
 
+## Demo
+   Android Banner Ads | Android Interstitial Ads
+:-------------------------: | :-------------------------:
+<img src="sc/1.png" width="300px"> | <img src="sc/2.png" width="300px"> 
+  iOS Banner Ads | iOS Interstitial Ads
+<img src="sc/3.png" width="300px"> | <img src="sc/4.png" width="300px"> 
 
-Learn more about [Kotlin Multiplatform](https://www.jetbrains.com/help/kotlin-multiplatform-dev/get-started.html)…
+## Build Project
+- Clone this project
+- For iOS cd to iosApp directory and install cocoapods for GoogleMobileAds
+```
+cd iosApp
+pod install --verbose
+```
+- run ```iosApp.xcworkspace``` instead of ```iosApp.xcodeproj```
